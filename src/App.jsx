@@ -1,11 +1,11 @@
 import React from 'react'
-import Home from './components/Home'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
-     <div className="w-full h-screen bg-green-600">
-      <Home/>
-    </div>
+     <>
+      <Navbar />
+    </>
   )
 }
 
