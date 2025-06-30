@@ -1,3 +1,5 @@
-import logo from './Logo.svg';
+import logo from './logo.svg';
+import headLogo from './headlogo.svg';
+import heroImage from './heroImage.png';
 
-export { logo }; 
+export { logo, headLogo, heroImage }; 

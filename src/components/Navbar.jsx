@@ -1,58 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.svg';
+import { logo } from '../assets/assets.js';
 
 const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Products', path: '/' },
-        { name: 'Contact', path: '/' },
+        { name: 'Hotels', path: '/' },
+        { name: 'Experience', path: '/' },
         { name: 'About', path: '/' },
     ];
 
-    const ref = React.useRef(null)
-
-    const [isScrolled, setIsScrolled] = React.useState(false);
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-    React.useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(ref.current.scrollTop > 10);
-        };
-        const scrollContainer = ref.current;
-        scrollContainer.addEventListener("scroll", handleScroll);
-        return () => scrollContainer && scrollContainer.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    // Set logo color based on scroll state
-    const logoColor = isScrolled ? 'var(--color-secondary)' : 'var(--color-primary)';
-
     return (
-        <div ref={ref} className="h-88 md:h-64 overflow-y-scroll">
-            <p className="w-10 h-[500px]"></p>
-            <nav className={`fixed top-0 left-0 bg-[var(--color-primary)] w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-4" : "py-4 md:py-6"}`}>
+        <div className="w-full absolute top-0 left-0">
+            <nav className={`w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 text-white py-4 md:py-6`}>
 
                 {/* Logo */}
-                <Link to="/" className="flex items-center gap-2">
-                    <img src={logo} alt="Logo" className="h-20 w-20" style={{ color: logoColor }} />
+                <Link to="/" className="flex items-center gap-2 text-2xl font-bold">
+                    <img src={logo} alt="Logo" className="h-8 w-8 invert" />
                 </Link>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-4 lg:gap-8">
                     {navLinks.map((link, i) => (
-                        <Link key={i} to={link.path} className={`group flex flex-col gap-0.5 ${isScrolled ? "text-gray-700" : "text-white"}`}>
+                        <Link key={i} to={link.path} className={`group flex flex-col gap-0.5 text-white`}>
                             {link.name}
-                            <div className={`${isScrolled ? "bg-gray-700" : "bg-white"} h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
+                            <div className={`bg-white h-0.5 w-0 group-hover:w-full transition-all duration-300`} />
                         </Link>
                     ))}
-                    <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`}>
-                        New Launch
+                    <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer text-white transition-all`}>
+                        Dashboard
                     </button>
                 </div>
 
                 {/* Desktop Right */}
                 <div className="hidden md:flex items-center gap-4">
-                    <svg className={`h-6 w-6 ${isScrolled ? "invert" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <svg className={`h-6 w-6 invert`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <circle cx="11" cy="11" r="8" />
                         <line x1="21" y1="21" x2="16.65" y2="16.65" />
                     </svg>
@@ -63,7 +47,7 @@ const Navbar = () => {
 
                 {/* Mobile Menu Button */}
                 <div className="flex items-center gap-3 md:hidden">
-                    <svg onClick={() => setIsMenuOpen(!isMenuOpen)} className={`h-6 w-6 cursor-pointer ${isScrolled ? "invert" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <svg onClick={() => setIsMenuOpen(!isMenuOpen)} className={`h-6 w-6 cursor-pointer invert`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <line x1="4" y1="6" x2="20" y2="6" />
                         <line x1="4" y1="12" x2="20" y2="12" />
                         <line x1="4" y1="18" x2="20" y2="18" />
@@ -85,8 +69,8 @@ const Navbar = () => {
                         </Link>
                     ))}
 
-                    <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all">
-                        New Launch
+                    <button className="border border-black px-4 py-1 text-sm font-light rounded-full cursor-pointer transition-all">
+                        Dashboard
                     </button>
 
                     <button className="bg-black text-white px-8 py-2.5 rounded-full transition-all duration-500">
