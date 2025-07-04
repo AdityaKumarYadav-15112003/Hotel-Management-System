@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './components/Home';
+import MyBookings from './components/MyBookings';
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
       <div className='min-h-[70vh]'>
         <Routes>
           <Route path='/' element={<Home/>} />
+          <Route path='/my-bookings' element={<MyBookings/>} />
         </Routes>
       </div>
     </div>
