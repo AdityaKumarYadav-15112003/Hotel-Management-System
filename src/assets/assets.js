@@ -3,6 +3,13 @@ import headLogo from './headlogo.svg';
 import heroImage from './heroImage.png';
 import starIconFilled from './starIconFilled.svg';
 import locationIcon from './locationIcon.svg';
+import hotelRoom1 from './hotelRoom1.jpg';
+import hotelRoom2 from './hotelRoom2.jpg';
+import hotelRoom3 from './hotelRoom3.jpg';
+import hotelRoom4 from './hotelRoom4.jpg';
+import offer1 from './offer1.jpg';
+import offer2 from './offer2.jpg';
+import offer3 from './offer3.jpg';
 
 export const assets = {
   logo,
@@ -10,12 +17,19 @@ export const assets = {
   heroImage,
   starIconFilled,
   locationIcon,
+  hotelRoom1,
+  hotelRoom2,
+  hotelRoom3,
+  hotelRoom4,
+  offer1,
+  offer2,
+  offer3,
 };
 
 export const roomsDummyData = [
   {
     _id: "1",
-    images: ["https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"],
+    images: [assets.hotelRoom1],
     hotel: {
       name: "Hotel Paradise",
       address: "123 Beach Ave, Miami, FL"
@@ -24,7 +38,7 @@ export const roomsDummyData = [
   },
   {
     _id: "2",
-    images: ["https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80"],
+    images: [assets.hotelRoom3],
     hotel: {
       name: "Mountain Retreat",
       address: "456 Mountain Rd, Denver, CO"
@@ -33,7 +47,7 @@ export const roomsDummyData = [
   },
   {
     _id: "3",
-    images: ["https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80"],
+    images: [assets.hotelRoom2],
     hotel: {
       name: "City Lights Hotel",
       address: "789 Downtown St, New York, NY"
@@ -42,7 +56,7 @@ export const roomsDummyData = [
   },
   {
     _id: "4",
-    images: ["https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80"],
+    images: [assets.hotelRoom4],
     hotel: {
       name: "Desert Oasis",
       address: "321 Desert Dr, Phoenix, AZ"
