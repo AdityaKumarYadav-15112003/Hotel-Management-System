@@ -10,6 +10,10 @@ import hotelRoom4 from './hotelRoom4.jpg';
 import offer1 from './offer1.jpg';
 import offer2 from './offer2.jpg';
 import offer3 from './offer3.jpg';
+import instagramIcon from './instagramIcon.svg';
+import facebookIcon from './facebookIcon.svg';
+import twitterIcon from './twitterIcon.svg';
+import linkendinIcon from './linkendinIcon.svg';
 
 export const assets = {
   logo,
@@ -24,6 +28,10 @@ export const assets = {
   offer1,
   offer2,
   offer3,
+  instagramIcon,
+  facebookIcon,
+  twitterIcon,
+  linkendinIcon,
 };
 
 export const roomsDummyData = [
